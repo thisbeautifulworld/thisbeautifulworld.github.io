@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+		<!--	created with www.mysitemapgenerator.com	-->
+		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+	<loc>https://thisbeautifulworld.github.io/</loc>
+	<lastmod>2020-09-30T21:11:00+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://thisbeautifulworld.github.io/animal/index.html</loc>
+	<lastmod>2020-09-30T21:11:01+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://thisbeautifulworld.github.io/plants/index.html</loc>
+	<lastmod>2020-09-30T21:11:03+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://thisbeautifulworld.github.io/protozoa/index.html</loc>
+	<lastmod>2020-09-30T21:11:04+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://thisbeautifulworld.github.io/animal/insects/protura.html</loc>
+	<lastmod>2020-09-30T21:11:04+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://thisbeautifulworld.github.io/animal/insects/collembola.html</loc>
+	<lastmod>2020-09-30T21:11:06+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://thisbeautifulworld.github.io/animal/insects/diplura.html</loc>
+	<lastmod>2020-09-30T21:11:04+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://thisbeautifulworld.github.io/animal/insects/microcoryphia.html</loc>
+	<lastmod>2020-09-30T21:11:05+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://thisbeautifulworld.github.io/animal/insects/thysanura.html</loc>
+	<lastmod>2020-09-30T21:11:05+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://thisbeautifulworld.github.io/animal/insects/ephemeroptera.html</loc>
+	<lastmod>2020-09-30T21:11:05+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://thisbeautifulworld.github.io/animal/insects/dragonfly.html</loc>
+	<lastmod>2020-09-30T21:11:06+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://thisbeautifulworld.github.io/animal/insects/plecoptera.html</loc>
+	<lastmod>2020-09-30T21:11:06+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://thisbeautifulworld.github.io/animal/insects/blattodea.html</loc>
+	<lastmod>2020-09-30T21:11:06+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+</urlset>
