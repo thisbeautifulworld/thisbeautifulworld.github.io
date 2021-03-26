@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Dini's surface</title>
+
+    <script type="text/javascript" src="three.js"></script>
+
+    <style>
+        body {
+
+            margin: 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="WebGL-output"></div>
+
+    <script type="text/javascript">
+
+        function init() {
+
+            var scene = new THREE.Scene();
+
+            var camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
+
+            var webGLRenderer = new THREE.WebGLRenderer();
+            webGLRenderer.setClearColor(new THREE.Color(0xEEEEEE, 1.0));
+            webGLRenderer.setSize(window.innerWidth, window.innerHeight);
+            webGLRenderer.shadowMapEnabled = true;
+
+            camera.position.x = 0;
+            camera.position.y = 0;
+            camera.position.z = 0;
+            camera.lookAt(new THREE.Vector3(0, 0, 0));
+
+            var spotLight = new THREE.DirectionalLight();
+            spotLight.position = new THREE.Vector3(-20, 250, -50);
+            spotLight.target.position.x = 30;
+            spotLight.target.position.y = -40;
+            spotLight.target.position.z = -20;
+            spotLight.intensity = 1;
+
+            scene.add(spotLight);
+
+            document.getElementById("WebGL-output").appendChild(webGLRenderer.domElement);
+
+            var step = 0;
+
+            paramFunck = function (u, v) {
+
+                var x = Math.cos(u * 4 * Math.PI) * Math.sin(v + 0.001);
+                var y = Math.sin(v + 0.001) * Math.sin(u * 4 * Math.PI);
+                var z = Math.cos(v + 0.001) + Math.log(Math.tan((v + 0.001) / 2)) + 0.2 * u * 4 * Math.PI - 4;
+
+                return new THREE.Vector3(x, y, z);
+            };
+
+            var mesh = createMesh(new THREE.ParametricGeometry(paramFunck, 120, 120, false));
+
+            mesh.position.x = 0;
+            mesh.position.y = 0;
+            mesh.position.z = -10;
+
+            scene.add(mesh);
+
+            render();
+
+            function createMesh(geom) {
+
+                THREE.ImageUtils.crossOrigin = 'anonymous';
+
+                var texture = THREE.ImageUtils.loadTexture('stone.jpg');
+                var bump = THREE.ImageUtils.loadTexture('stone-bump.jpg');
+
+                /*var texture = THREE.ImageUtils.loadTexture('https://i.ibb.co/8zHx1JG/stone.jpg');
+                var bump = THREE.ImageUtils.loadTexture('https://i.ibb.co/6yyHgcq/stone-bump.jpg');*/
+
+                var mat = new THREE.MeshPhongMaterial({
+                    map: texture,
+                    bumpMap: bump,
+                    specular: 0xFFFFFF,
+                    shininess: 30,
+                })
+
+                mat.side = THREE.DoubleSide;
+
+                var plane = THREE.SceneUtils.createMultiMaterialObject(geom, [mat]);
+
+                return plane;
+            }
+
+            function render() {
+
+                requestAnimationFrame(render);
+
+                mesh.rotation.y += 0.01;
+
+                webGLRenderer.render(scene, camera);
+            }
+        }
+
+        window.onload = init;
+
+    </script>
+</body>
+
+</html>
